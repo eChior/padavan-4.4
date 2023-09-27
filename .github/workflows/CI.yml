@@ -25,13 +25,10 @@ jobs:
             targets: "CR660x"
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3 # 设置nodejs版本号
+      - name: Use Node
+        uses: actions/setup-node@v3
         with:
-        node-version: 16
-      - run: npm ci
-      - run: npm teststeps:
+          node-version: 16
       - name: Prepare environment
         run: |
           sudo apt update
