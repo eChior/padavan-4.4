@@ -145,6 +145,7 @@ start_adg(){
 }
 stop_adg(){
 rm -rf /tmp/AdGuardHome
+logger -t "AdGuardHome" "停止 AdGuardHome"
 killall -9 AdGuardHome
 del_dns
 clear_iptable
